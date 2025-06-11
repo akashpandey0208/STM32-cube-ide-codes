@@ -1,0 +1,10 @@
+14:22:22 **** Incremental Build of configuration Debug for project led_h747_CM7 ****
+make -j12 all 
+arm-none-eabi-size  led_h747_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7692	     16	   1568	   9276	   243c	led_h747_CM7.elf
+Finished building: default.size.stdout
+ 
+
+14:22:22 Build Finished. 0 errors, 0 warnings. (took 546ms)
+

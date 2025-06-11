@@ -1,0 +1,10 @@
+12:21:00 **** Incremental Build of configuration Debug for project SPI_Master_polling_CM7 ****
+make -j12 all 
+arm-none-eabi-size  SPI_Master_polling_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23884	     20	   1852	  25756	   649c	SPI_Master_polling_CM7.elf
+Finished building: default.size.stdout
+ 
+
+12:21:00 Build Finished. 0 errors, 0 warnings. (took 257ms)
+
