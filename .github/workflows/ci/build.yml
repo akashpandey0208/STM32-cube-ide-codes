@@ -3,8 +3,6 @@ name: C/C++ CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
@@ -16,6 +14,7 @@ jobs:
     - name: Set up STM32 toolchain and build
       shell: pwsh
       run: |
+        cd Demo_github_actions
         $env:PATH = "C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.make.win32_2.2.0.202409170845\tools\bin\;C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130\tools\bin;" + $env:PATH
         make -j22 all
 
