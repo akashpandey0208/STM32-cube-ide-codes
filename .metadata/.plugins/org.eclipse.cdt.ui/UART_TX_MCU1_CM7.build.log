@@ -1,0 +1,10 @@
+10:32:08 **** Incremental Build of configuration Debug for project UART_TX_MCU1_CM7 ****
+make -j12 all 
+arm-none-eabi-size  UART_TX_MCU1_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21416	     16	   1720	  23152	   5a70	UART_TX_MCU1_CM7.elf
+Finished building: default.size.stdout
+ 
+
+10:32:08 Build Finished. 0 errors, 0 warnings. (took 341ms)
+

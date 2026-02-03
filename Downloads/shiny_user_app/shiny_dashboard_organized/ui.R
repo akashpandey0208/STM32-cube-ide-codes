@@ -3,6 +3,7 @@
 # ============================================================================
 
 ui <- fluidPage(
+  shinyjs::useShinyjs(),
   tags$head(
     tags$meta(name = "viewport", content = "width=device-width, initial-scale=1"),
     tags$link(rel = "stylesheet", type = "text/css", href = "css/style_main.css"),
@@ -10,6 +11,7 @@ ui <- fluidPage(
     tags$link(rel = "stylesheet", type = "text/css", href = "css/style_topbar.css"),
     tags$link(rel = "stylesheet", type = "text/css", href = "css/style_buttons.css"),
     tags$link(rel = "stylesheet", type = "text/css", href = "css/style_graphs.css"),
+    tags$link(rel = "stylesheet", type = "text/css", href = "css/style_data_explorer.css"),
     tags$link(
       rel = "stylesheet",
       href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"

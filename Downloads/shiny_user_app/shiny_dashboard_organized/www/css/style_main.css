@@ -34,10 +34,15 @@ html, body, .app-container {
 
 /* Content Area */
 .content {
-  padding: 22px;
+  padding: 0;
   flex: 1;
   background: #f6f8f9;
-  overflow: auto;
+  overflow: hidden;
+}
+
+/* Content with padding (for non-explorer pages) */
+.content > .page-card {
+  margin: 22px;
 }
 
 /* Page Cards */

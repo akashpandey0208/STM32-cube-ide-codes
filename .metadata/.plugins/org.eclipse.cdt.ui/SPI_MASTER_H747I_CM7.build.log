@@ -1,0 +1,10 @@
+14:46:42 **** Incremental Build of configuration Debug for project SPI_MASTER_H747I_CM7 ****
+make -j12 all 
+arm-none-eabi-size  SPI_MASTER_H747I_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26356	     16	   1856	  28228	   6e44	SPI_MASTER_H747I_CM7.elf
+Finished building: default.size.stdout
+ 
+
+14:46:42 Build Finished. 0 errors, 0 warnings. (took 401ms)
+

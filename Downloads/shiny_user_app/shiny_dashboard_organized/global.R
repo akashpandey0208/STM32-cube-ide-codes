@@ -4,6 +4,7 @@
 
 # Load required libraries
 library(shiny)
+library(shinyjs)
 library(DT)
 library(ggplot2)
 library(plotly)
@@ -13,6 +14,7 @@ library(dplyr)
 # Source Module Files
 # ============================================================================
 
+source("modules/cdisc_converter.R")
 source("modules/data_module.R")
 source("modules/table_module.R")
 source("modules/graphs_module.R")

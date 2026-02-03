@@ -1,0 +1,55 @@
+name: CI Build and Flash
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build (ubuntu-latest)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install build tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y build-essential make gcc-arm-none-eabi binutils-arm-none-eabi openocd
+
+      - name: Build project (Debug makefile)
+        run: |
+          cd Debug
+          make -j$(nproc) all
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Demo_github_actions-artifacts
+          path: Debug/Demo_github_actions.elf
+
+  flash-self-hosted:
+    name: Flash (self-hosted runner)
+    needs: build
+    # This job requires a self-hosted runner that has USB access to the target board.
+    runs-on: [self-hosted, linux]
+    if: contains(runner.labels, 'self-hosted')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install build & flash tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y build-essential make gcc-arm-none-eabi binutils-arm-none-eabi openocd
+
+      - name: Build again to ensure ELF is current
+        run: |
+          cd Debug
+          make -j$(nproc) all
+
+      - name: Flash with OpenOCD
+        working-directory: Debug
+        run: |
+          # Ensure runner has permission to access ST-Link; running with sudo is common on hosted boxes
+          sudo openocd -f interface/stlink.cfg -f target/stm32f4x.cfg -c "program Demo_github_actions.elf verify reset exit"
