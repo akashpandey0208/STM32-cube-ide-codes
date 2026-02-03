@@ -1,0 +1,159 @@
+/* ============================================================================
+   Main Layout and General Styles
+   ============================================================================ */
+
+/* Root Variables */
+:root {
+  --sidebar-bg: #213142;
+  --topbar-bg: #213142;
+  --accent: #1ea7ff;
+  --primary-red: #d1351b;
+  --gray-dark: #727477;
+  --gray-medium: #606164;
+  --gray-light: #8a8c8f;
+}
+
+/* Base Reset */
+html, body, .app-container {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main Container */
+.app-container {
+  display: flex;
+}
+
+/* Main Content Area */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content Area */
+.content {
+  padding: 22px;
+  flex: 1;
+  background: #f6f8f9;
+  overflow: auto;
+}
+
+/* Page Cards */
+.page-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(33, 49, 66, 0.08);
+  margin-bottom: 20px;
+}
+
+/* Card Styles */
+.card-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.card {
+  background: white;
+  padding: 14px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  flex: 1;
+}
+
+.card h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.card .big {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Utility Classes */
+.muted {
+  color: #777;
+  font-size: 13px;
+}
+
+/* Control Row */
+.control-row {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 12px;
+}
+
+/* Modal Styles */
+.modal-dialog {
+  max-width: 1000px;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+.modal-body {
+  max-height: 700px;
+  align-content: center;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.modal-sm {
+  max-width: 1200px;
+  align-content: center;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+/* Info Box */
+.info-box {
+  min-height: 55px;
+  float: center;
+  box-shadow: 5px 5px 5px lightgrey;
+  border-bottom: 0px;
+}
+
+.info-box-icon.bg-black {
+  height: 55px;
+}
+
+.bg-black {
+  background-color: var(--gray-dark) !important;
+  height: 55px;
+  line-height: 55px;
+}
+
+/* Text Colors */
+.text-success {
+  color: var(--primary-red);
+  font-size: large;
+}
+
+/* Error Handling */
+.shiny-output-error {
+  visibility: hidden;
+}
+
+.shiny-output-error:before {
+  visibility: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+  
+  .content {
+    padding: 12px;
+  }
+  
+  .card-row {
+    flex-direction: column;
+  }
+}

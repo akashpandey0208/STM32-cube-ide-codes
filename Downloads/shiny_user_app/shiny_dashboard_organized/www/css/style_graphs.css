@@ -1,0 +1,149 @@
+/* ============================================================================
+   Graph and Chart Styles
+   ============================================================================ */
+
+/* Four-Grid Layout for Graph Slots */
+.four-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+/* Chart Slot Container */
+.chart-slot {
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+}
+
+.chart-slot .slot-actions {
+  margin-bottom: 8px;
+  align-self: flex-end;
+}
+
+.chart-slot .plotly {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+/* Upload Card Styles */
+.upload-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(33, 49, 66, 0.08);
+}
+
+.upload-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+/* Upload Drop Zone */
+.upload-drop-wrapper {
+  padding: 12px 0;
+}
+
+.upload-drop {
+  border: 2px dashed #d6dbe0;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  background: #fbfdff;
+  transition: all 0.3s ease;
+}
+
+.upload-drop:hover {
+  border-color: var(--accent);
+  background: #f0f8ff;
+}
+
+.upload-drop .upload-icon {
+  font-size: 28px;
+  color: #8aa3b2;
+  margin-bottom: 8px;
+}
+
+.upload-drop h4 {
+  margin: 6px 0;
+  color: #213142;
+}
+
+.upload-drop p {
+  color: #7a8b92;
+  margin: 4px 0 12px 0;
+}
+
+.upload-drop .btn {
+  display: inline-block;
+}
+
+/* Data Quality and Analysis Displays */
+#coxreg {
+  overflow-y: auto;
+  max-height: 200px;
+  background-color: lightgrey;
+  box-shadow: inset 0px -5px 5px darkgrey;
+}
+
+#coxreg_aic {
+  background-color: lightgrey;
+}
+
+#logreg {
+  overflow-y: auto;
+  max-height: 200px;
+  background-color: lightgrey;
+  box-shadow: inset 0px -5px 5px darkgrey;
+}
+
+#logreg_aic {
+  background-color: lightgrey;
+}
+
+/* Plotly Customization */
+.plotly .modebar {
+  right: 10px;
+}
+
+/* Graph Controls */
+.graph-controls {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.graph-controls label {
+  font-weight: 600;
+  color: #213142;
+  margin-bottom: 4px;
+}
+
+/* Responsive Grid */
+@media (max-width: 900px) {
+  .four-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-slot {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .upload-drop {
+    padding: 20px;
+  }
+  
+  .upload-drop .upload-icon {
+    font-size: 20px;
+  }
+}

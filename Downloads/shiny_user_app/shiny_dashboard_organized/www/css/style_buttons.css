@@ -1,0 +1,165 @@
+/* ============================================================================
+   Button Styles
+   ============================================================================ */
+
+/* Font Awesome Icons */
+.fa {
+  margin-right: 10px;
+}
+
+.fa.fa-gear.opt {
+  margin-right: 0px;
+}
+
+.fa.fa-search-plus.opt {
+  margin-right: 0px;
+}
+
+.fa.fa-user,
+.fa.fa-thumbs-o-up,
+.fa.fa-flask.flask-box,
+.fa.fa-spinner.spinner-box {
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+/* Success Buttons (Default Gray) */
+.btn-success {
+  font-size: 18px;
+  font-family: inherit;
+  padding: 5px 12px;
+  height: 55px;
+  min-width: 21.85%;
+  margin: 0px 10px 14px 20px;
+  text-align: left;
+  color: white;
+  background: var(--gray-dark);
+  text-indent: 4px;
+  vertical-align: middle;
+  border-radius: 0px;
+  border-color: transparent;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18), 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+  transform: translate3d(0, 0, 0);
+}
+
+.btn-success:hover {
+  background-color: var(--primary-red);
+  font-size: 18px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.4s ease-out;
+}
+
+/* Warning Buttons (Active Red) */
+.btn-warning,
+.btn-warning:hover {
+  font-size: 18px;
+  font-family: inherit;
+  padding: 5px 12px;
+  height: 55px;
+  min-width: 21.85%;
+  margin: 0px 10px 14px 20px;
+  text-align: left;
+  color: white;
+  background: var(--primary-red);
+  text-indent: 4px;
+  vertical-align: middle;
+  border-radius: 0px;
+  border-color: transparent;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18), 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+  transform: translate3d(0, 0, 0);
+}
+
+/* Intro Button */
+#intro {
+  margin-bottom: 0;
+  align-items: center;
+  display: block;
+  margin: 0 auto;
+  background: var(--primary-red);
+  color: white;
+  min-width: 25%;
+  border-color: white;
+}
+
+/* Sidebar Button */
+#sidebar_button {
+  height: 55px;
+}
+
+/* Small Buttons (for chart slots and compact areas) */
+.btn-sm {
+  height: auto;
+  width: auto;
+  padding: 6px 10px;
+  font-size: 13px;
+  min-width: auto;
+  margin: 4px;
+}
+
+.chart-slot .btn-danger,
+.chart-slot .btn-primary {
+  height: auto;
+  width: auto;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+/* Tab Navigation */
+.nav-tabs-custom > .nav-tabs > li.active {
+  border-top-color: var(--gray-medium);
+}
+
+.nav-tabs-custom {
+  box-shadow: 5px 5px 5px lightgrey;
+}
+
+/* Upload Card Tabs */
+.upload-tabs .tab-btn {
+  background: #e9eef1;
+  color: #213142;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-tabs .tab-btn:hover {
+  background: #d6dbe0;
+}
+
+.upload-tabs .tab-btn.active {
+  background: #213142;
+  color: #fff;
+}
+
+/* Link Buttons */
+.upload-actions .link-small {
+  color: #6c7a82;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.upload-actions .link-small:hover {
+  color: var(--primary-red);
+  text-decoration: underline;
+}
+
+/* Responsive Button Adjustments */
+@media (max-width: 900px) {
+  .btn-success,
+  .btn-warning {
+    min-width: auto;
+    width: 100%;
+    margin: 5px 0;
+  }
+}

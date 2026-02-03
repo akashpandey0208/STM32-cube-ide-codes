@@ -1,0 +1,173 @@
+/* ============================================================================
+   Sidebar Styles
+   ============================================================================ */
+
+.sidebar {
+  width: 220px;
+  background: var(--sidebar-bg);
+  color: #fff;
+  min-height: 100vh;
+  padding: 22px 12px 22px 14px;
+  box-sizing: border-box;
+  height: 90vh;
+  overflow-y: auto;
+}
+
+/* Brand Area */
+.sidebar .brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.sidebar h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.sidebar img {
+  width: 36px;
+  height: 36px;
+}
+
+/* Menu Items */
+.menu-item {
+  display: block;
+  color: #cfe3ee;
+  padding: 12px 10px;
+  margin: 6px 0;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+}
+
+.menu-item.active {
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 4px solid var(--accent);
+  color: #fff;
+}
+
+/* Sidebar Links */
+.sidebar a {
+  color: #ffffff;
+}
+
+/* Sidebar with Skin-black compatibility */
+.skin-black .left-side,
+.skin-black .main-sidebar,
+.skin-black .wrapper {
+  background-color: var(--gray-dark);
+}
+
+.skin-black .sidebar-menu > li.active > a,
+.skin-black .sidebar-menu > li:hover > a {
+  color: #fff;
+  background: var(--gray-medium);
+  border-left-color: var(--primary-red);
+}
+
+.skin-black .sidebar-menu > li > .treeview-menu {
+  margin: 0 1px;
+  background: var(--gray-light);
+  box-shadow: inset 0px 0px 7px #000000;
+  padding-bottom: 2px;
+}
+
+.skin-black .treeview-menu > li > a {
+  color: white;
+  white-space: pre-line;
+}
+
+.skin-black .treeview-menu > li:hover > a {
+  color: white;
+  white-space: pre-line;
+  background-color: var(--gray-medium);
+}
+
+/* Logo Styles */
+.main-header .logo {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  letter-spacing: -1px;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.skin-black .main-header > .logo {
+  background-color: var(--primary-red);
+  color: #ffffff;
+  border-bottom: 0 solid transparent;
+  border-right: 1px solid var(--primary-red);
+}
+
+.skin-black .main-header > .logo:hover {
+  background-color: var(--primary-red);
+}
+
+/* Resource Menu */
+.resource-menu {
+  padding: 8px;
+}
+
+.resource-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resource-list li {
+  padding: 6px 0;
+}
+
+.resource-list a {
+  color: #cfe3ee;
+  text-decoration: none;
+}
+
+/* Side Panel */
+.side-panel .side-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Action Buttons in Sidebar */
+.sidebar .btn-danger {
+  background-color: var(--primary-red);
+  border-color: var(--primary-red);
+  height: 55px;
+  width: 300px;
+  border-radius: 0;
+  position: relative;
+  font-size: 18px;
+}
+
+.sidebar .btn-primary {
+  background-color: darkgrey;
+  border-color: darkgrey;
+  color: white;
+  height: 55px;
+  width: 300px;
+  border-radius: 0;
+  position: relative;
+  font-size: 18px;
+}
+
+.sidebar .btn-primary:hover {
+  background-color: var(--primary-red);
+  border-color: var(--primary-red);
+  color: white;
+}
+
+section.sidebar .shiny-bound-input.action-button,
+section.sidebar .shiny-bound-input.action-link {
+  margin: auto;
+  display: block;
+}
